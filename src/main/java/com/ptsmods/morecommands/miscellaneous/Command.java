@@ -240,11 +240,11 @@ public abstract class Command {
 	}
 
 	protected static Predicate<ServerCommandSource> hasPermissionOrOp(@NotNull String permission) {
-		return hasPermission(permission, 2);
+		return hasPermission(permission, 4);
 	}
 
 	protected static Predicate<ServerCommandSource> hasPermission(@NotNull String permission) {
-		return hasPermission(permission, 0);
+		return hasPermission(permission, 3);
 	}
 
 	public static boolean isPermissionsLoaded() {

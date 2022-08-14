@@ -785,7 +785,7 @@ public class MoreCommands implements IMoreCommands, ModInitializer {
 			LOG.catching(e);
 		}
 
-		MoreGameRules.checkPerms(server);
+		// MoreGameRules.checkPerms(server);
 		LOG.info("MoreCommands data path: " + getRelativePath(server));
 	}
 
