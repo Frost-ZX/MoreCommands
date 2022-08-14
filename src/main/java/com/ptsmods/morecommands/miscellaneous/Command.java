@@ -137,11 +137,11 @@ public abstract class Command {
 	}
 
 	public static LiteralArgumentBuilder<ServerCommandSource> literalReqOp(String literal) {
-		return literal(literal).requires(hasPermissionOrOp("morecommands." + literal));
+		return literal("mc-" + literal).requires(hasPermissionOrOp("morecommands." + literal));
 	}
 
 	public static LiteralArgumentBuilder<ServerCommandSource> literalReq(String literal) {
-		return literal(literal).requires(hasPermission("morecommands." + literal));
+		return literal("mc-" + literal).requires(hasPermission("morecommands." + literal));
 	}
 
 	public static <T> RequiredArgumentBuilder<ServerCommandSource, T> argument(String name, ArgumentType<T> type) {

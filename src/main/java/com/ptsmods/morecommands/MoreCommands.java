@@ -868,7 +868,7 @@ public class MoreCommands implements IMoreCommands, ModInitializer {
 	}
 
 	public static <S> LiteralCommandNode<S> createAlias(String alias, LiteralCommandNode<S> node) {
-		LiteralCommandNode<S> node0 = new LiteralCommandNode<>(alias, node.getCommand(), node.getRequirement(), node, ctx -> Collections.singletonList(ctx.getSource()), false);
+		LiteralCommandNode<S> node0 = new LiteralCommandNode<>("mc-" + alias, node.getCommand(), node.getRequirement(), node, ctx -> Collections.singletonList(ctx.getSource()), false);
 		node.getChildren().forEach(node0::addChild);
 		return node0;
 	}
